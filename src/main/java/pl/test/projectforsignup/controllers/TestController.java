@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 @RestController
 public class TestController {
 
-// tojest test czy działa
+
+    // test czy działa
+
 
     @GetMapping("/")
     public String sayHi() {
@@ -28,3 +30,4 @@ public class TestController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 }
+
