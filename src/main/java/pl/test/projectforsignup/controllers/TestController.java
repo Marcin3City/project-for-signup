@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class TestController {
 
 
-    // test czy działa
+    
 
 
     @GetMapping("/")
