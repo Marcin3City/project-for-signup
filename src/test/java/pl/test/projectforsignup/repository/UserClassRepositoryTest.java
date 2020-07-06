@@ -29,7 +29,7 @@ class UserClassRepositoryTest {
 
     @Test
     void testDeleteUserMethod() {
-
+        userRepository.deleteById(userRepository.findAll().get(0).getId());
     }
 
     @Test
