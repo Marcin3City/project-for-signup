@@ -10,28 +10,42 @@ public class UserClass {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private final String userName;
-    private final String password;
-    private final UserRoles userRoles;
+    private String userName;
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private UserRoles userRoles;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUserName() {
         return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public UserRoles getUserRoles() {
         return userRoles;
     }
 
-    public UserClass(String userName, String password, UserRoles userRoles) {
-        this.userName = userName;
-        this.password = password;
+    public void setUserRoles(UserRoles userRoles) {
         this.userRoles = userRoles;
-
-
     }
 
     @Override
